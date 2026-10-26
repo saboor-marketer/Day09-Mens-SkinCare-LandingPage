@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+/* 
+ * STRICT TWO-COLOR DESIGN SYSTEM
+ * 1. Midnight Navy: #101820 (Primary)
+ * 2. Soft Ivory: #F5F1E8 (Secondary)
+ *
+ * Rules:
+ * - Midnight Navy is the primary color for headings, navigation, buttons, icons, borders, and dark sections.
+ * - Soft Ivory is the secondary color for page backgrounds, cards, light sections, and negative space.
+ * - No third brand color. Only opacity variations of these two approved colors.
+ */
+
+:root {
+  --color-primary: #101820;
+  --color-secondary: #F5F1E8;
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  overflow-x: hidden;
+}
+
+/* Accessible outline for keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom scrollbar using strict two-color palette */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F1E8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(16, 24, 32, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 24, 32, 0.6);
+}
+
+/* Strict Brand Utilities */
+.bg-navy {
+  background-color: #101820;
+}
+
+.bg-ivory {
+  background-color: #F5F1E8;
+}
+
+.text-navy {
+  color: #101820;
+}
+
+.text-ivory {
+  color: #F5F1E8;
+}
+
+.border-navy {
+  border-color: #101820;
+}
+
+.border-ivory {
+  border-color: #F5F1E8;
+}
+
+/* Subtle opacity variations of approved palette */
+.border-navy-10 {
+  border-color: rgba(16, 24, 32, 0.1);
+}
+
+.border-navy-20 {
+  border-color: rgba(16, 24, 32, 0.2);
+}
+
+.border-navy-40 {
+  border-color: rgba(16, 24, 32, 0.4);
+}
+
+.border-ivory-20 {
+  border-color: rgba(245, 241, 232, 0.2);
+}
+
+.border-ivory-40 {
+  border-color: rgba(245, 241, 232, 0.4);
+}
+
+.bg-navy-05 {
+  background-color: rgba(16, 24, 32, 0.05);
+}
+
+.bg-navy-10 {
+  background-color: rgba(16, 24, 32, 0.1);
+}
+
+.bg-navy-90 {
+  background-color: rgba(16, 24, 32, 0.9);
+}
+
+.bg-ivory-10 {
+  background-color: rgba(245, 241, 232, 0.1);
+}
+
+.bg-ivory-05 {
+  background-color: rgba(245, 241, 232, 0.05);
+}
+
+.text-navy-70 {
+  color: rgba(16, 24, 32, 0.7);
+}
+
+.text-navy-80 {
+  color: rgba(16, 24, 32, 0.8);
+}
+
+.text-navy-60 {
+  color: rgba(16, 24, 32, 0.6);
+}
+
+.text-ivory-80 {
+  color: rgba(245, 241, 232, 0.8);
+}
+
+.text-ivory-60 {
+  color: rgba(245, 241, 232, 0.6);
+}
+
+.text-ivory-70 {
+  color: rgba(245, 241, 232, 0.7);
+}
